@@ -1,7 +1,10 @@
 package udworldnet.com.letzeat;
 
 import android.content.Context;
+import android.util.Patterns;
 import android.widget.Toast;
+
+import java.util.regex.Pattern;
 
 /**
  * Created by darwin on 05/03/16.
@@ -37,12 +40,25 @@ public class ValidatorRules {
     }
 
     /**
+     *Validate email: check whether it is not empty and if it matches with the Patterns of Email address
+     * Show Toast with a warning if Validation fails
      *
-     * @param currentContext
-     * @param email_ID
-     * @return
+     * @param currentContext context, in which validation occurs
+     * @param email email to be validated
+     * @return true if email address is valid , false if it email is  not valid
      */
-    public static boolean isEmailValid(Context currentContext, CharSequence email_ID){
+    public static boolean isEmailValid(Context currentContext, CharSequence email){
+
+        if(email.toString().isEmpty())
+        {
+            Toast.makeText(currentContext,"Email cannot be empty",Toast.LENGTH_LONG).show();
+            return false;
+        }
+        if (!Patterns.EMAIL_ADDRESS.matcher((email)).matches()){
+            Toast.makeText(currentContext,"Invalid email format",Toast.LENGTH_LONG).show();
+            return false;
+        }
+
         return true;
     }
 
@@ -53,6 +69,31 @@ public class ValidatorRules {
      * @return
      */
     public static boolean isAgeValid(Context currentContext, Number year){
+        return true;
+    }
+
+    /**
+     * Validates password : check wheather it is not empty and if the password is same with the password_retype
+     * Show Toast what a warning if validation fails
+     *
+     * @param currentContext
+     * @param password
+     * @param password_retype
+     * @return
+     */
+    public static boolean isPasswardValid(Context currentContext, CharSequence password, CharSequence password_retype){
+
+        if(password.toString().isEmpty()){
+            Toast.makeText(currentContext,"Password cannot be empty",Toast.LENGTH_LONG).show();
+            return false;
+        }
+
+        //validates wheather password is correctly retyped
+        if (!password.toString().equals(password_retype.toString())) {
+            Toast.makeText(currentContext, "Password is not correctly retyped", Toast.LENGTH_LONG).show();
+            return false;
+        }
+        
         return true;
     }
 }

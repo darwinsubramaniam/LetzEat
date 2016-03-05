@@ -15,6 +15,8 @@
 		48E64AE51C8B403D008C1D99 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48E64AE31C8B403D008C1D99 /* LaunchScreen.storyboard */; };
 		48E64AF01C8B403D008C1D99 /* LetzEatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E64AEF1C8B403D008C1D99 /* LetzEatTests.swift */; };
 		48E64AFB1C8B403D008C1D99 /* LetzEatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E64AFA1C8B403D008C1D99 /* LetzEatUITests.swift */; };
+		48E64B0A1C8B477D008C1D99 /* ServerSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E64B091C8B477D008C1D99 /* ServerSettings.swift */; };
+		48E64B0C1C8B478E008C1D99 /* ValidationRules.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E64B0B1C8B478E008C1D99 /* ValidationRules.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		48E64AF61C8B403D008C1D99 /* LetzEatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LetzEatUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		48E64AFA1C8B403D008C1D99 /* LetzEatUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetzEatUITests.swift; sourceTree = "<group>"; };
 		48E64AFC1C8B403D008C1D99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		48E64B091C8B477D008C1D99 /* ServerSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerSettings.swift; sourceTree = "<group>"; };
+		48E64B0B1C8B478E008C1D99 /* ValidationRules.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidationRules.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,7 @@
 		48E64AD61C8B403C008C1D99 /* LetzEat */ = {
 			isa = PBXGroup;
 			children = (
+				48E64B081C8B475D008C1D99 /* Login */,
 				48E64AD71C8B403C008C1D99 /* AppDelegate.swift */,
 				48E64AD91C8B403C008C1D99 /* ViewController.swift */,
 				48E64ADB1C8B403D008C1D99 /* Main.storyboard */,
@@ -126,6 +131,15 @@
 				48E64AFC1C8B403D008C1D99 /* Info.plist */,
 			);
 			path = LetzEatUITests;
+			sourceTree = "<group>";
+		};
+		48E64B081C8B475D008C1D99 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				48E64B091C8B477D008C1D99 /* ServerSettings.swift */,
+				48E64B0B1C8B478E008C1D99 /* ValidationRules.swift */,
+			);
+			name = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,8 +277,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				48E64ADA1C8B403C008C1D99 /* ViewController.swift in Sources */,
+				48E64B0C1C8B478E008C1D99 /* ValidationRules.swift in Sources */,
 				48E64AD81C8B403C008C1D99 /* AppDelegate.swift in Sources */,
 				48E64AE01C8B403D008C1D99 /* LetzEat.xcdatamodeld in Sources */,
+				48E64B0A1C8B477D008C1D99 /* ServerSettings.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
