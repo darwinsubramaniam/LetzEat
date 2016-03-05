@@ -69,6 +69,7 @@ public class ValidatorRules {
      * @return
      */
     public static boolean isAgeValid(Context currentContext, Number year){
+
         return true;
     }
 
@@ -93,7 +94,7 @@ public class ValidatorRules {
             Toast.makeText(currentContext, "Password is not correctly retyped", Toast.LENGTH_LONG).show();
             return false;
         }
-        
+
         return true;
     }
 }
