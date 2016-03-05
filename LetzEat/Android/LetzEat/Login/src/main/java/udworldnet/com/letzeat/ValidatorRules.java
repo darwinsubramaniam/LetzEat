@@ -19,7 +19,6 @@ public class ValidatorRules {
      *
      * @param currentContext context in which validator occurs
      * @param name user's name to be validated
-     * @param true when the validation is a succes , false if validation failed
      */
     public static boolean isNameValid(Context currentContext, CharSequence name)
     {
