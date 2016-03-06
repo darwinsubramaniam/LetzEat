@@ -1,10 +1,8 @@
-package udworldnet.com.letzeat;
+package udworldnet.com.letzeat.LogicBlock;
 
 import android.content.Context;
 import android.util.Patterns;
 import android.widget.Toast;
-
-import java.util.regex.Pattern;
 
 /**
  * Created by darwin on 05/03/16.
